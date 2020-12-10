@@ -9,7 +9,7 @@ class Triangle
   end
 
   def self.kind
-    if @s1==@s2 && @s2==@s3
+    if @s1==@s2 && @s2==@s3 && @s1 == @s3
       return "Equilateral"
     else
       begin
