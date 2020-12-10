@@ -11,6 +11,13 @@ class Triangle
   def self.kind
     if @s1==@s2 && @s2==@s3
       return "Equilateral"
+    else
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
+
     end
   end
 
