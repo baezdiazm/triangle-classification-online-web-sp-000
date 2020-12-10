@@ -10,7 +10,7 @@ class Triangle
 
   def self.kind
     if @s1==@s2 && @s2==@s3
-      return "quilateral"
+      return "Equilateral"
     end
   end
 
