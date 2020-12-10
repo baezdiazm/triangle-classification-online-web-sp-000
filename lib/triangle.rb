@@ -13,4 +13,8 @@ class Triangle
       return "quilateral"
     end
   end
+
+  class TriangleError < StandardError
+
+  end
 end
