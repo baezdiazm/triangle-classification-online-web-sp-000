@@ -6,6 +6,6 @@ class Triangle
     @s1 = s1
     @s2 = s2
     @s3 = s3
-
   end
+
 end
