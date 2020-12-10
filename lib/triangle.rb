@@ -8,4 +8,9 @@ class Triangle
     @s3 = s3
   end
 
+  def self.kind
+    if @s1==@s2 && @s2==@s3
+      return "quilateral"
+    end
+  end
 end
