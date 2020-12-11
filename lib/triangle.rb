@@ -15,6 +15,12 @@ class Triangle
       :isosceles
     elsif @s1!=@s2 && @s2!=@s3 && @s1!=@s3
       :scalene
+    elsif @s1 == 0 || @s2 == 0 || @s3 == 0
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        error.message
+      end
     end
   end
 
