@@ -16,9 +16,6 @@ class Triangle
      :isosceles
    else
      :scalene
-    elsif @sides[0]+ @sides[1] < @sides[2]
-      raise TriangleError
-    end
   end
 
   class TriangleError < StandardError
