@@ -8,13 +8,14 @@ class Triangle
   end
 
   def kind
-    @sides.sort!
-    if @s1==@s2 && @s2==@s3 && @s1==@s3
-      return :equilateral
-    elsif @s1==@s2 || @s2==@s3 || @s1==@s3
-      :isosceles
-    elsif @s1!=@s2 && @s2!=@s3 && @s1!=@s3
-      :scalene
+   if @sides.any?{|side| side <= 0} || ((@sides[0] + @sides[1]) <= @sides[2])
+     raise TriangleError
+   elsif @sides.uniq.length == 1
+     :equilateral
+   elsif @sides.uniq.length == 2
+     :isosceles
+   else
+     :scalene
     elsif @sides[0]+ @sides[1] < @sides[2]
       raise TriangleError
     end
