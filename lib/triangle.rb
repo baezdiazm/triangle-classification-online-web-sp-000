@@ -9,11 +9,7 @@ class Triangle
 
   def kind
    if @sides.any?{|side| side <= 0} || ((@sides[0] + @sides[1]) <= @sides[2])
-     begin
-       raise TriangleError
-     rescue TriangleError => error
-       puts error.message
-     end
+      raise TriangleError
    elsif @sides.uniq.length == 1
      :equilateral
    elsif @sides.uniq.length == 2
