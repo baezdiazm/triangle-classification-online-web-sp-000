@@ -17,7 +17,7 @@ class Triangle
       :scalene
     elsif @s1 == 0 || @s2 == 0 || @s3 == 0
       begin
-        raise TriangleError
+        raise_error TriangleError
       rescue TriangleError => error
         error.message
       end
