@@ -15,8 +15,8 @@ class Triangle
       :isosceles
     elsif @s1!=@s2 && @s2!=@s3 && @s1!=@s3
       :scalene
-    elsif @s1 + @s2 < @s3
-        raise TriangleError
+    else
+      raise TriangleError
     end
   end
 
